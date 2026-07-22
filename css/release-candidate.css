@@ -1,0 +1,20 @@
+*,*::before,*::after{box-sizing:border-box}html,body{margin:0;padding:0}body{position:relative}
+/* v0.4.1 release hardening: preserve the design while preventing viewport overflow. */
+html{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
+body{width:100%;max-width:100%;min-width:320px;overflow-x:hidden;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+img,svg,canvas{max-width:100%}
+button,input,textarea,select{font:inherit}
+.app-shell{width:100%;max-width:690px;min-width:0;overflow-x:hidden;overflow-x:clip}
+main,.page,.glass-card,.calendar-card,.garden-scene,.settings-card,.journal-card,.orchid-moment,.cycle-hero,.garden-preview{min-width:0;max-width:100%}
+.topbar,.brand,.section-heading,.cycle-hero,.garden-preview,.setup-card,.reflection-card,.journal-prompt{min-width:0}
+.brand{max-width:calc(100% - 52px)}.brand span{min-width:0}.brand small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bottom-nav{max-width:calc(100vw - 24px);overflow:visible}.nav-item{min-width:0;flex:1}.nav-item span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.orchid-moment,.garden-preview{isolation:isolate}.moment-copy,.garden-preview>div:last-child,.reflection-card>div:last-child,.journal-prompt span:nth-child(2){min-width:0}
+.moment-copy p,.garden-preview p,.reflection-card p,.settings-note p,.setup-card small{overflow-wrap:anywhere}
+.calendar-grid{min-width:0}.calendar-day{min-width:0;margin:2px;height:clamp(34px,10vw,40px);padding:0}.weekdays span{min-width:0}
+.checkin-sheet{max-height:calc(100svh - 24px);overflow-y:auto;overscroll-behavior:contain}.mood-options button,.primary-button,.calendar-header button,.icon-button,.nav-item,.metric-card,.journal-prompt,.setup-card{touch-action:manipulation}
+.icon-button:focus-visible,.nav-item:focus-visible,.metric-card:focus-visible,.journal-prompt:focus-visible,.setup-card:focus-visible,.primary-button:focus-visible,.mood-options button:focus-visible,.calendar-header button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.metric-card:active,.journal-prompt:active,.setup-card:active,.primary-button:active{transform:scale(.985)}
+@media(max-width:359px){.app-shell{padding-left:14px;padding-right:14px}.topbar{height:72px}.brand-mark{width:31px;height:31px}.brand strong{font-size:17px}.brand small{font-size:8px}.hero h1{font-size:34px}.orchid-moment{height:230px;padding:20px}.moment-copy{width:67%}.orchid-stage{right:-58px;transform:scale(.92);transform-origin:right bottom}.section-heading{margin-top:30px}.section-heading h2{font-size:24px}.forecast-card{padding:14px}.forecast-card strong{font-size:16px}.garden-preview{padding:16px}.garden-preview-art{min-width:78px;height:102px}.bottom-nav{height:68px}.nav-item{font-size:9px}.garden-tab{margin-top:-27px}.nav-bloom{width:48px;height:48px}}
+@media(min-width:700px){.app-shell{padding-bottom:112px}.living-hero{padding-top:42px}.orchid-moment{height:270px}.forecast-grid{max-width:420px}.garden-preview{max-width:560px}.calendar-card{max-width:620px}.journal-card{max-width:620px}}
+@media(hover:none){.metric-card:hover{transform:none;box-shadow:0 8px 26px rgba(63,43,79,.06)}}

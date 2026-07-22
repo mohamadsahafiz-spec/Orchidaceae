@@ -1,0 +1,13 @@
+Orchidaceae Founder Edition
+
+This project has been prepared as the base for the Founder Edition.
+
+Planned changes:
+- Production app icons
+- Updated manifest.json
+- Apple PWA meta tags
+- Improved install experience
+- GitHub Pages deployment
+
+This file confirms the project was unpacked successfully and is ready
+for the next implementation pass.
