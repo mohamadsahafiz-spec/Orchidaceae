@@ -162,3 +162,23 @@
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js').catch(() => {});
   render();
 })();
+
+/* ==========================================================
+   Orchidaceae Splash Screen
+   Build 002
+========================================================== */
+
+window.addEventListener("load", () => {
+
+    const splash = document.getElementById("orchid-splash");
+
+    if (!splash) return;
+
+    // Allow the UI to settle before fading out
+    setTimeout(() => {
+
+        splash.classList.add("hide");
+
+    }, 2200);
+
+});
