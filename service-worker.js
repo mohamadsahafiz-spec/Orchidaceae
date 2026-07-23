@@ -1,4 +1,4 @@
-const CACHE = 'orchidaceae-v0-4-1';
+const CACHE = "orchidaceae-v0-6-0-build002";
 const APP_FILES = ['./', './index.html', './css/style.css', './css/cycle.css', './css/living-experience.css', './css/release-candidate.css', './js/app.js', './manifest.json', './assets/orchidaceae-mark.svg'];
 
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_FILES)).then(() => self.skipWaiting())));
