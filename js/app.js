@@ -159,26 +159,23 @@
   $('#previous-month').addEventListener('click', () => { calendarMonth.setMonth(calendarMonth.getMonth() - 1); renderCalendar(); });
   $('#next-month').addEventListener('click', () => { calendarMonth.setMonth(calendarMonth.getMonth() + 1); renderCalendar(); });
 
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js').catch(() => {});
-  render();
-})();
+if ('serviceWorker' in navigator)
+    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
 
-/* ==========================================================
-   Orchidaceae Splash Screen
-   Build 002
-========================================================== */
+render();
 
-window.addEventListener("load", () => {
+/* Splash Screen */
 
-    const splash = document.getElementById("orchid-splash");
+const splash = document.getElementById("orchid-splash");
 
-    if (!splash) return;
+if (splash) {
 
-    // Allow the UI to settle before fading out
     setTimeout(() => {
 
         splash.classList.add("hide");
 
     }, 2200);
 
-});
+}
+
+})();
